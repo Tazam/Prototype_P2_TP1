@@ -11,26 +11,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="418.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m1.piu.FXMLMainFrameController">
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="962.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m1.piu.FXMLMainFrameController">
     <children>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="690.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-                  <MenuItem mnemonicParsing="false" text="New" />
-              <MenuItem mnemonicParsing="false" text="Open..." />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Save as..." />
-                  <MenuItem mnemonicParsing="false" text="Exit" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <Pane id="mainPane" layoutX="-1.0" layoutY="67.0" prefHeight="448.0" prefWidth="962.0">
+         <children>
+            <fx:include source="FXMLMainPanel.fxml" />
+         </children></Pane>
+      <AnchorPane layoutY="522.0" prefHeight="25.0" prefWidth="962.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="17.0" prefWidth="156.0" text="Selected contact : Toto Toto" AnchorPane.bottomAnchor="4.0" />
+         </children>
+      </AnchorPane>
       <ToolBar layoutY="27.0" prefHeight="40.0" prefWidth="690.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <items>
             <TextField promptText="Look for file" />
@@ -52,14 +43,23 @@
             </Button>
         </items>
       </ToolBar>
-      <AnchorPane layoutY="396.0" prefHeight="25.0" prefWidth="690.0">
-         <children>
-            <Label layoutY="4.0" prefHeight="17.0" prefWidth="156.0" text="Selected contact : Toto Toto" />
-         </children>
-      </AnchorPane>
-      <Pane id="mainPane" layoutX="-1.0" layoutY="67.0" prefHeight="326.0" prefWidth="690.0">
-         <children>
-            <fx:include source="FXMLMainPanel.fxml" />
-         </children></Pane>
+      <MenuBar layoutY="-78.0" prefHeight="105.0" prefWidth="962.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+              <MenuItem mnemonicParsing="false" text="Open..." />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save as..." />
+                  <MenuItem mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
     </children>
 </AnchorPane>
