@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m1.piu.FXMLMainFrameController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane id="anchorPaneAdressBook" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <fx:include source="FXMLAdressBookViewer.fxml" />
+               </children></AnchorPane>
+
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="73.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="398.0" prefWidth="417.0">
+                    <items>
+                      <AnchorPane id="anchorPaneContactList" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <fx:include source="FXMLContactTable.fxml" />
+                           </children></AnchorPane>
+                      <AnchorPane id="anchorPaneContactDetails" minHeight="0.0" minWidth="0.0" prefHeight="85.0" prefWidth="158.0">
+                           <children>
+                              <fx:include source="FXMLContactDetails.fxml" />
+                           </children></AnchorPane>
+
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
